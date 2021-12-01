@@ -4,4 +4,4 @@ with open(filename) as f:
 
 content = [int(x.strip()) for x in content]
 
-print(sum((1 if y > x else 0) for x, y in zip(content, content[1:])))
+print(sum((y > x) for x, y in zip(content, content[1:])))
