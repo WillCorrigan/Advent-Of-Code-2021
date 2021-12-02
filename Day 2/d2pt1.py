@@ -6,8 +6,8 @@ with open(filename) as f:
     content = f.readlines()
 
 content = [[x[0], int(x[1])] for x in (y.strip().split(" ") for y in content)]
-test = [[k, v] for k, v in pd.DataFrame(content).groupby(0).sum()[1].items()]
+summed_content = [[k, v] for k, v in pd.DataFrame(content).groupby(0).sum()[1].items()]
 
-answer = (test[0][1] - test[2][1]) * test[1][1]
+answer = (summed_content[0][1] - summed_content[2][1]) * summed_content[1][1]
 
-print(test)
+print(answer)
