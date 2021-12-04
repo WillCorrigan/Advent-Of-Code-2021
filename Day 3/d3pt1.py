@@ -1,6 +1,6 @@
 from collections import Counter
 
-filename = "C:\\Users\\wcorr\\Desktop\\AoC 2021\\Day 3\\data.txt"
+filename = "data.txt"
 with open(filename) as f:
     content = f.readlines()
 
