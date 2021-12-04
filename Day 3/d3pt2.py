@@ -31,6 +31,7 @@ oxygen_generator_rating = "".join(recur(0, content, "o2")[0])
 co2_scrubber_rating = "".join(recur(0, content, "co2")[0])
 life_support_rating = int(oxygen_generator_rating, base=2) * int(co2_scrubber_rating, base=2)
 
+# Correct answers only please
 print(oxygen_generator_rating)
 print(co2_scrubber_rating)
 
