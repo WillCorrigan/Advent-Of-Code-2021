@@ -4,8 +4,6 @@ class Board:
     def __init__(self, index, lines):
         self.index = index
         self.lines = lines
-        self.row_count = 0
-        self.column_count = 0
         self.winner = False
         self.checked_as_winner = False
 
