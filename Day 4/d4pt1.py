@@ -38,15 +38,15 @@ def check_if_winner(board, board_index, bingo_number):
     for indx, val in enumerate(tmp_row):
         if val.most_common()[0][1] == 5:
             print("winner is board: " + str(board_index))
-            print("total of unmarked numbers is: " + str(sum([int(i) for list in board for i in list if i != "marked"])))
-            print("total multiplied by winning number is: " + str(sum([int(i) for list in board for i in list if i != "marked"]) * int(bingo_number)))
+            print("total of unmarked numbers is: " + str(sum([int(i) for lst in board for i in lst if i != "marked"])))
+            print("total multiplied by winning number is: " + str(sum([int(i) for lst in board for i in lst if i != "marked"]) * int(bingo_number)))
             return True
 
     for indx, val in enumerate(tmp_column):
         if val.most_common()[0][1] == 5:
             print("winner is board: " + str(board_index))
-            print("total of unmarked numbers is: " + str(sum([int(i) for list in board for i in list if i != "marked"])))
-            print("total multiplied by winning number is: " + str(sum([int(i) for list in board for i in list if i != "marked"]) * int(bingo_number)))
+            print("total of unmarked numbers is: " + str(sum([int(i) for lst in board for i in lst if i != "marked"])))
+            print("total multiplied by winning number is: " + str(sum([int(i) for lst in board for i in lst if i != "marked"]) * int(bingo_number)))
             return True
             
     return False
