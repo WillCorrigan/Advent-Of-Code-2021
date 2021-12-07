@@ -1,4 +1,3 @@
-from collections import Counter, defaultdict
 import statistics
 
 initial_state = None
