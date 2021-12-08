@@ -15,10 +15,6 @@ with open(filename) as f:
 letters = {'a': None, 'b': None, 'c': None, 'd': None, 'e': None, 'f': None, 'g': None}
 numbers = {0: '', 1: '', 2: '', 3: '', 4: '', 5: '', 6: '', 7: '', 8: '', 9: ''}
 
-
-
-
-
 def solve_letters(input):
         numbers[1] = "".join((filter(lambda x : len(x) == 2, input)))
         numbers[4] = "".join(filter(lambda x : len(x) == 4, input))
@@ -38,21 +34,23 @@ def solve_letters(input):
         numbers[2] = "".join(filter(lambda x : len(x) == 5 and x != numbers[5] and x != numbers[3], input))
         letters['f'] == "".join([letter for letter in numbers[8] if letter not in "".join(set(numbers[2]+letters['b']))])
 
-        return letters, numbers
-
-
+        return numbers
 
 answer_to_sum = []
 
 for index, item in enumerate(solve_output):
-    letters, numbers = solve_letters(decipher_output[index])
+    numbers = solve_letters(decipher_output[index])
+
     for key, value in numbers.items():
         numbers[key] = "".join(sorted(value))
+
     total = 0
     tmp_number = []
+
     for letter_combo in item:
         letter_combo = "".join(sorted(letter_combo))
         tmp_number.append(list(numbers.keys())[list(numbers.values()).index(letter_combo)])
+        
     tmp_number = int("".join([str(x) for x in tmp_number]))
     total += tmp_number
     tmp_number = []
